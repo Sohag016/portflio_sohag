@@ -62,8 +62,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md py-3 border-b border-slate-200/80"
-          : "bg-white/90 backdrop-blur-sm py-4 border-b border-slate-100"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-1 border-b border-slate-200/80"
+          : "bg-white/90 backdrop-blur-sm py-1 border-b border-slate-100"
       }`}
     >
       <div className="container w-[90%] sm:w-[95%] mx-auto flex items-center justify-between">
@@ -71,7 +71,7 @@ export default function Navbar() {
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, "#home")}
-          className="group flex items-center gap-3 px-3 py-1.5 rounded-full transition-all hover:-translate-y-0.5"
+          className="group flex items-center gap-3 py-1.5 rounded-full transition-all hover:-translate-y-0.5"
         >
           <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-200 overflow-hidden group-hover:border-sky-400 group-hover:shadow-md transition-all">
             <Image
@@ -102,7 +102,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`relative px-3.5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
+                className={`relative px-3.5 py-1 text-[16px] font-semibold rounded-lg transition-all duration-200 ${
                   isActive
                     ? "text-blue-600 font-bold bg-blue-50/80"
                     : "text-slate-700 hover:text-blue-600 hover:bg-slate-50"
