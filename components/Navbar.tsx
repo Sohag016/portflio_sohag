@@ -66,7 +66,7 @@ export default function Navbar() {
           : "bg-white/90 backdrop-blur-sm py-4 border-b border-slate-100"
       }`}
     >
-      <div className="container w-[90%] mx-auto flex items-center justify-between">
+      <div className="container w-[90%] sm:w-[95%] mx-auto flex items-center justify-between">
         {/* Brand Logo */}
         <a
           href="#home"
