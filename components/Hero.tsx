@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-16 px-[5%] sm:px-0 flex items-center justify-center bg-[radial-gradient(circle_at_10%_20%,#111827_0%,#0f172a_100%)] overflow-hidden text-white scroll-mt-24"
+      className="relative min-h-screen pt-28 pb-16 flex items-center justify-center bg-[radial-gradient(circle_at_10%_20%,#111827_0%,#0f172a_100%)] overflow-hidden text-white scroll-mt-24"
     >
       {/* Background Glow Blobs */}
       <div className="absolute -top-[10%] -left-[5%] w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-blue-600/10 rounded-full blur-[100px] animate-float-bg pointer-events-none" />
@@ -25,7 +25,7 @@ export default function Hero() {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none z-0" />
 
-      <div className="relative z-10 container w-[90%] mx-auto w-full">
+      <div className="relative z-10 container w-[90%] sm:w-[95%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Content Column */}
           <motion.div

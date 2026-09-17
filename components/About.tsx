@@ -11,12 +11,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-[40px] sm:py-32 bg-[#fdfdfd] text-slate-900 overflow-hidden scroll-mt-24"
+      className="relative py-[50px] md:py-[50px] lg:py-[100px] bg-[#fdfdfd] text-slate-900 overflow-hidden scroll-mt-24"
     >
       {/* Background Soft Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(at_0%_0%,rgba(59,130,246,0.04)_0px,transparent_50%),radial-gradient(at_100%_100%,rgba(0,210,255,0.03)_0px,transparent_50%)] pointer-events-none" />
 
-      <div className="relative z-10 container w-[90%] mx-auto">
+      <div className="relative z-10 container w-[90%] sm:w-[95%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Image Side */}
           <motion.div

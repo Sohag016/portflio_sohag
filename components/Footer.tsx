@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-950 text-white border-t border-slate-900 pt-16 pb-12 relative overflow-hidden">
-      <div className="container w-[90%] mx-auto">
+      <div className="container w-[90%] sm:w-[95%] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Column 1: About Summary */}
           <div>

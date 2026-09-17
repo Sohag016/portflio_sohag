@@ -33,9 +33,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-[40px] sm:py-32 bg-white text-slate-900 overflow-hidden scroll-mt-24"
+      className="py-[50px] md:py-[50px] lg:py-[100px] bg-white text-slate-900 overflow-hidden scroll-mt-24"
     >
-      <div className="container w-[90%] mx-auto">
+      <div className="container w-[90%] sm:w-[95%] mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -80,13 +80,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-[40px] sm:py-32 bg-[#080a0f] text-white overflow-hidden scroll-mt-24"
+      className="relative py-[50px] md:py-[50px] lg:py-[100px] bg-[#080a0f] text-white overflow-hidden scroll-mt-24"
     >
       {/* Glow background circles */}
       <div className="absolute -top-[100px] -right-[50px] w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(37,99,235,0.1)_0%,transparent_70%)] pointer-events-none rounded-full" />
       <div className="absolute -bottom-[50px] -left-[50px] w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.08)_0%,transparent_70%)] pointer-events-none rounded-full" />
 
-      <div className="relative z-10 container w-[90%] mx-auto">
+      <div className="relative z-10 container w-[90%] sm:w-[95%] mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
