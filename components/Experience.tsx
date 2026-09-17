@@ -1,371 +1,309 @@
-"use client";
+﻿"use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { Briefcase, LayoutGrid, Award, HeartHandshake, Eye, ExternalLink } from "lucide-react";
-import { timelineExperiences, certificateList } from "@/data/portfolio";
-import CertificateModal from "./CertificateModal";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import "@/app/experience.css";
+import {
+  allExperiences,
+  certificationCards,
+  extracurricularCards,
+  workExperiences,
+} from "@/data/experienceData";
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState<"all" | "work" | "extracurricular" | "certification">("all");
-  const [selectedCertImage, setSelectedCertImage] = useState<string | null>(null);
-  const [selectedCertTitle, setSelectedCertTitle] = useState<string>("");
 
-  const isImageLink = (url: string) => /\.(jpg|jpeg|png|webp|gif|svg)($|\?)/i.test(url);
+  const renderLink = (
+    link: { label: string; url: string; secondary?: boolean },
+    index: number
+  ) => (
+    <a
+      key={`${link.label}-${index}`}
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        flex: 1,
+        padding: "12px",
+        background: link.secondary ? "transparent" : "#003366",
+        color: link.secondary ? "#003366" : "white",
+        textDecoration: "none",
+        border: link.secondary ? "2px solid #003366" : "none",
+        borderRadius: "10px",
+        fontWeight: 700,
+        fontSize: "0.85em",
+        textAlign: "center",
+        transition: "all 0.4s ease",
+      }}
+      onMouseOver={(e) => {
+        if (link.secondary) {
+          e.currentTarget.style.background = "#003366";
+          e.currentTarget.style.color = "white";
+        } else {
+          e.currentTarget.style.background = "#002244";
+          e.currentTarget.style.transform = "translateY(-2px)";
+        }
+      }}
+      onMouseOut={(e) => {
+        if (link.secondary) {
+          e.currentTarget.style.background = "transparent";
+          e.currentTarget.style.color = "#003366";
+        } else {
+          e.currentTarget.style.background = "#003366";
+          e.currentTarget.style.transform = "translateY(0)";
+        }
+      }}
+    >
+      {link.label}
+    </a>
+  );
 
-  const openCertificate = (imgSrc: string, title: string) => {
-    setSelectedCertImage(imgSrc);
-    setSelectedCertTitle(title);
-  };
+  const renderExperienceItem = (item: (typeof allExperiences)[number], index: number) => (
+    <motion.div
+      key={item.id}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      className={`container ${item.side}`}
+    >
+      <div
+        className="cert-box"
+        style={{
+          border: "1px solid #d1d5db",
+          padding: "30px",
+          borderRadius: "20px",
+          background: "linear-gradient(135deg, #ffffff 0%, #eef2f7 100%)",
+          boxShadow: "0 15px 35px rgba(0, 51, 102, 0.1)",
+        }}
+      >
+        <div
+          className="tag"
+          style={{
+            display: "inline-block",
+            padding: "6px 15px",
+            background: item.tagBg,
+            color: item.tagColor,
+            borderRadius: "50px",
+            fontWeight: 800,
+            fontSize: "0.75em",
+            letterSpacing: "1px",
+            textTransform: "uppercase",
+            marginBottom: "15px",
+            boxShadow: "0 4px 10px rgba(0, 51, 102, 0.2)",
+          }}
+        >
+          {item.tag}
+        </div>
+        <div className="desc">
+          <h3 style={{ margin: "0 0 10px", color: "#1a1a1a", fontSize: "1.5em", fontWeight: 800 }}>
+            {item.company}
+          </h3>
+          <h4 style={{ margin: "0 0 15px", color: item.tagBg, fontSize: "0.95em", fontWeight: 700 }}>
+            {item.role} | {item.period}
+          </h4>
+          <p style={{ fontSize: "0.95em", color: "#444", lineHeight: 1.7, marginBottom: "25px" }}>
+            {item.description}
+          </p>
+          <div style={{ display: "flex", gap: "12px" }}>
+            {item.links.map(renderLink)}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+
+  const allTabCards = [...extracurricularCards, ...certificationCards];
+
+  const renderCard = (card: (typeof certificationCards)[number]) => (
+    <div
+      key={card.id}
+      className="cert-box"
+      style={{
+        border: "1px solid #e2e8f0",
+        padding: "20px",
+        borderRadius: "16px",
+        textAlign: "center",
+        width: "100%",
+        background: "#ffffff",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        height: "100%",
+      }}
+    >
+      <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+        <div
+          style={{
+            overflow: "hidden",
+            borderRadius: "10px",
+            border: "1px solid #f1f5f9",
+            marginBottom: "16px",
+            aspectRatio: "4 / 3",
+            width: "100%",
+            background: "#f8fafc",
+            flexShrink: 0,
+          }}
+        >
+          <img
+            src={card.image}
+            alt={card.alt}
+            style={{
+              width: "100%",
+              height: "100%",
+              aspectRatio: "4 / 3",
+              objectFit: "contain",
+              objectPosition: "center",
+              display: "block",
+            }}
+          />
+        </div>
+        <h3 style={{ margin: "0 0 4px", color: card.accent, fontSize: "1.35em", fontWeight: 800 }}>
+          {card.title}
+        </h3>
+        <h4 style={{ margin: "0 0 8px", color: "#1e293b", fontSize: "1.05em" }}>{card.subtitle}</h4>
+        <p style={{ margin: "0 0 12px", fontSize: "0.88em", color: "#475569", lineHeight: 1.5 }}>
+          {card.description}
+        </p>
+      </div>
+      <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "8px" }}>
+        {card.links.map((link, index) => (
+          <a
+            key={`${card.id}-${link.label}-${index}`}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "block",
+              padding: "11px",
+              background: card.accent,
+              color: "white",
+              textDecoration: "none",
+              borderRadius: "8px",
+              fontWeight: 600,
+              fontSize: "0.85em",
+            }}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <section
-      id="experience"
-      className="py-[50px] md:py-[50px] lg:py-[100px] bg-slate-900 text-white overflow-hidden scroll-mt-24"
-    >
-      <div className="container w-[90%] sm:w-[95%] mx-auto">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+    <section id="experience" className="experience-section">
+      <h2 className="heading">
+        <i className="fas fa-briefcase"></i> Experience
+      </h2>
+
+      <div className="experience-buttons">
+        <button
+          className={`exp-btn ${activeTab === "all" ? "active" : ""}`}
+          onClick={() => setActiveTab("all")}
         >
-          <div className="flex items-center justify-center gap-2.5 sm:gap-4 mb-4">
-            <div className="inline-flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-blue-500/10 text-blue-400 shrink-0 border border-blue-500/20 shadow-sm">
-              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-            </div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
-              Experience & <span className="text-blue-500">Achievements</span>
-            </h2>
-          </div>
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-medium">
-            Virtual internships, global fellowships, hackathon recognitions, and professional course certifications.
-          </p>
-        </motion.div>
-
-        {/* Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
-          <button
-            onClick={() => setActiveTab("all")}
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeTab === "all"
-                ? "bg-blue-600 text-white shadow-lg shadow-blue-600/40 scale-105"
-                : "bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white"
-              }`}
-          >
-            <LayoutGrid size={16} /> All Experience
-          </button>
-
-          <button
-            onClick={() => setActiveTab("work")}
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeTab === "work"
-                ? "bg-blue-600 text-white shadow-lg shadow-blue-600/40 scale-105"
-                : "bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white"
-              }`}
-          >
-            <Briefcase size={16} /> Work & Internships
-          </button>
-
-          <button
-            onClick={() => setActiveTab("extracurricular")}
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeTab === "extracurricular"
-                ? "bg-blue-600 text-white shadow-lg shadow-blue-600/40 scale-105"
-                : "bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white"
-              }`}
-          >
-            <HeartHandshake size={16} /> Extracurricular
-          </button>
-
-          <button
-            onClick={() => setActiveTab("certification")}
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeTab === "certification"
-                ? "bg-blue-600 text-white shadow-lg shadow-blue-600/40 scale-105"
-                : "bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white"
-              }`}
-          >
-            <Award size={16} /> Certifications
-          </button>
-        </div>
-
-        {/* Tab Content Display */}
-        <AnimatePresence mode="wait">
-          {/* ALL & WORK & EXTRACURRICULAR TIMELINE VIEWS */}
-          {(activeTab === "all" || activeTab === "work" || activeTab === "extracurricular") && (
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="space-y-12"
-            >
-              {/* Timeline Container */}
-              <div className="relative max-w-4xl mx-auto before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-800">
-                {timelineExperiences
-                  .filter((item) => {
-                    if (activeTab === "work") {
-                      return item.id === "codealpha" || item.id === "aspire-fellow";
-                    }
-                    if (activeTab === "extracurricular") {
-                      return (
-                        item.id === "solvio-hackathon" ||
-                        item.id === "cuet-datathon" ||
-                        item.id === "igso-volunteer" ||
-                        item.id === "shikkhar-alo"
-                      );
-                    }
-                    return true;
-                  })
-                  .map((item, index) => {
-                    const isEven = index % 2 === 0;
-
-                    return (
-                      <motion.div
-                        key={item.id}
-                        initial={{ opacity: 0, x: isEven ? -40 : 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-12`}
-                      >
-                        {/* Timeline Center Dot Icon */}
-                        <div className="flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 border-2 border-blue-500 text-blue-400 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                          <Briefcase size={16} />
-                        </div>
-
-                        {/* Card Container */}
-                        <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-slate-950 p-6 sm:p-8 rounded-3xl border border-slate-800/80 shadow-xl hover:border-slate-700 transition-all">
-                          <span
-                            className="inline-block px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-4"
-                            style={{
-                              backgroundColor: item.tagBg,
-                              color: item.tagColor,
-                            }}
-                          >
-                            {item.tag}
-                          </span>
-
-                          <h3 className="text-2xl font-black text-white tracking-tight mb-1">
-                            {item.company}
-                          </h3>
-                          <h4 className="text-sm font-bold text-blue-400 mb-4">
-                            {item.role} | {item.period}
-                          </h4>
-
-                          <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                            {item.description}
-                          </p>
-
-                          <div className="flex flex-wrap gap-3">
-                            {item.links.map((link, lIdx) =>
-                              isImageLink(link.url) ? (
-                                <button
-                                  key={lIdx}
-                                  onClick={() =>
-                                    openCertificate(link.url, `${item.company} - ${link.label}`)
-                                  }
-                                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 inline-flex items-center gap-1.5 touch-manipulation active:scale-95 ${
-                                    link.secondary
-                                      ? "bg-transparent text-slate-300 border border-slate-700 hover:bg-slate-800"
-                                      : "bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/20"
-                                  }`}
-                                >
-                                  <Eye size={14} /> {link.label}
-                                </button>
-                              ) : (
-                                <a
-                                  key={lIdx}
-                                  href={link.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 inline-flex items-center gap-1.5 touch-manipulation active:scale-95 ${
-                                    link.secondary
-                                      ? "bg-transparent text-slate-300 border border-slate-700 hover:bg-slate-800"
-                                      : "bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/20"
-                                  }`}
-                                >
-                                  <ExternalLink size={14} /> {link.label}
-                                </a>
-                              )
-                            )}
-                          </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-              </div>
-
-              {/* Show Certifications section inside ALL tab */}
-              {activeTab === "all" && (
-                <div className="pt-16 border-t border-slate-800">
-                  <h3 className="text-3xl font-black text-center text-white mb-12">
-                    Professional Course <span className="text-blue-500">Certifications</span>
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {certificateList.map((cert) => (
-                      <div
-                        key={cert.id}
-                        className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all"
-                      >
-                        <div>
-                          <div className="relative w-full h-48 rounded-2xl overflow-hidden border border-slate-800 mb-6 group">
-                            <Image
-                              src={cert.image}
-                              alt={cert.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-500"
-                              unoptimized
-                            />
-                            {cert.badge && (
-                              <div className="absolute top-3 right-3 bg-rose-600 text-white font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md tracking-wider">
-                                {cert.badge}
-                              </div>
-                            )}
-                          </div>
-
-                          <h4 className="text-xl font-extrabold text-white tracking-tight mb-1">
-                            {cert.title}
-                          </h4>
-                          <p className="text-xs font-bold text-blue-400 mb-3">
-                            {cert.issuer} {cert.subIssuer && `| ${cert.subIssuer}`} ({cert.date})
-                          </p>
-                          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 italic">
-                            "{cert.description}"
-                          </p>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2.5">
-                          {cert.links.map((link, idx) =>
-                            isImageLink(link.url) ? (
-                              <button
-                                key={idx}
-                                onClick={() =>
-                                  openCertificate(link.url, `${cert.title} - ${link.label}`)
-                                }
-                                className={`flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-center transition-all inline-flex items-center justify-center gap-1.5 touch-manipulation active:scale-95 ${
-                                  link.primary
-                                    ? "bg-blue-600 hover:bg-blue-500 text-white shadow-md"
-                                    : "bg-slate-800 hover:bg-slate-700 text-slate-300"
-                                }`}
-                              >
-                                <Eye size={14} /> {link.label}
-                              </button>
-                            ) : (
-                              <a
-                                key={idx}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-center transition-all inline-flex items-center justify-center gap-1.5 touch-manipulation active:scale-95 ${
-                                  link.primary
-                                    ? "bg-blue-600 hover:bg-blue-500 text-white shadow-md"
-                                    : "bg-slate-800 hover:bg-slate-700 text-slate-300"
-                                }`}
-                              >
-                                <ExternalLink size={14} /> {link.label}
-                              </a>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          )}
-
-          {/* CERTIFICATIONS ONLY TAB VIEW */}
-          {activeTab === "certification" && (
-            <motion.div
-              key="certification"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto"
-            >
-              {certificateList.map((cert) => (
-                <div
-                  key={cert.id}
-                  className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all"
-                >
-                  <div>
-                    <div className="relative w-full h-52 rounded-2xl overflow-hidden border border-slate-800 mb-6 group">
-                      <Image
-                        src={cert.image}
-                        alt={cert.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        unoptimized
-                      />
-                      {cert.badge && (
-                        <div className="absolute top-3 right-3 bg-rose-600 text-white font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md tracking-wider">
-                          {cert.badge}
-                        </div>
-                      )}
-                    </div>
-
-                    <h4 className="text-xl font-extrabold text-white tracking-tight mb-1">
-                      {cert.title}
-                    </h4>
-                    <p className="text-xs font-bold text-blue-400 mb-3">
-                      {cert.issuer} ({cert.date})
-                    </p>
-                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 italic">
-                      "{cert.description}"
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2.5">
-                    {cert.links.map((link, idx) =>
-                      isImageLink(link.url) ? (
-                        <button
-                          key={idx}
-                          onClick={() =>
-                            openCertificate(link.url, `${cert.title} - ${link.label}`)
-                          }
-                          className={`flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-center transition-all inline-flex items-center justify-center gap-1.5 touch-manipulation active:scale-95 ${
-                            link.primary
-                              ? "bg-blue-600 hover:bg-blue-500 text-white shadow-md"
-                              : "bg-slate-800 hover:bg-slate-700 text-slate-300"
-                          }`}
-                        >
-                          <Eye size={14} /> {link.label}
-                        </button>
-                      ) : (
-                        <a
-                          key={idx}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`flex-1 px-4 py-2.5 rounded-xl text-xs font-bold text-center transition-all inline-flex items-center justify-center gap-1.5 touch-manipulation active:scale-95 ${
-                            link.primary
-                              ? "bg-blue-600 hover:bg-blue-500 text-white shadow-md"
-                              : "bg-slate-800 hover:bg-slate-700 text-slate-300"
-                          }`}
-                        >
-                          <ExternalLink size={14} /> {link.label}
-                        </a>
-                      )
-                    )}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+          <i className="fas fa-th-large"></i> All Experience
+        </button>
+        <button
+          className={`exp-btn ${activeTab === "work" ? "active" : ""}`}
+          onClick={() => setActiveTab("work")}
+        >
+          <i className="fas fa-briefcase"></i> Work
+        </button>
+        <button
+          className={`exp-btn ${activeTab === "extracurricular" ? "active" : ""}`}
+          onClick={() => setActiveTab("extracurricular")}
+        >
+          <i className="fas fa-hands-helping"></i> Extracurricular
+        </button>
+        <button
+          className={`exp-btn ${activeTab === "certification" ? "active" : ""}`}
+          onClick={() => setActiveTab("certification")}
+        >
+          <i className="fas fa-certificate"></i> Course Certification
+        </button>
       </div>
 
-      {/* Lightbox Certificate Modal */}
-      <CertificateModal
-        isOpen={Boolean(selectedCertImage)}
-        onClose={() => setSelectedCertImage(null)}
-        imageSrc={selectedCertImage || ""}
-        title={selectedCertTitle}
-      />
+      {activeTab === "all" && (
+        <div className="experience-container active" id="all">
+          <div className="timeline">{allExperiences.map(renderExperienceItem)}</div>
+
+          <div style={{ marginTop: "2.5rem" }}>
+            <h3
+              style={{
+                margin: "0 0 1.25rem",
+                color: "#003366",
+                fontSize: "2rem",
+                fontWeight: 800,
+                textAlign: "center",
+              }}
+            >
+              All Certificates
+            </h3>
+            <div className="cert-row">{allTabCards.map(renderCard)}</div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "work" && (
+        <div className="experience-container active" id="work">
+          <div
+            className="cert-box"
+            style={{
+              border: "1px solid #d1d5db",
+              padding: "30px",
+              borderRadius: "20px",
+              background: "linear-gradient(135deg, #ffffff 0%, #eef2f7 100%)",
+              boxShadow: "0 15px 35px rgba(0, 51, 102, 0.1)",
+              maxWidth: "960px",
+              margin: "0 auto",
+            }}
+          >
+            <div
+              className="tag"
+              style={{
+                display: "inline-block",
+                padding: "6px 15px",
+                background: "#003366",
+                color: "#ffffff",
+                borderRadius: "50px",
+                fontWeight: 800,
+                fontSize: "0.75em",
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                marginBottom: "15px",
+                boxShadow: "0 4px 10px rgba(0, 51, 102, 0.2)",
+              }}
+            >
+              {workExperiences[0].tag}
+            </div>
+            <div className="desc">
+              <h3 style={{ margin: "0 0 10px", color: "#1a1a1a", fontSize: "1.5em", fontWeight: 800 }}>
+                {workExperiences[0].company}
+              </h3>
+              <h4 style={{ margin: "0 0 15px", color: "#003366", fontSize: "0.95em", fontWeight: 700 }}>
+                {workExperiences[0].role} | {workExperiences[0].period}
+              </h4>
+              <p style={{ fontSize: "0.95em", color: "#444", lineHeight: 1.7, marginBottom: "25px" }}>
+                {workExperiences[0].description}
+              </p>
+              <div style={{ display: "flex", gap: "12px" }}>{workExperiences[0].links.map(renderLink)}</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "extracurricular" && (
+        <div className="experience-container active" id="extracurricular">
+          <div className="cert-row">{extracurricularCards.map(renderCard)}</div>
+        </div>
+      )}
+
+      {activeTab === "certification" && (
+        <div className="experience-container active" id="certification">
+          <div className="cert-row">{certificationCards.map(renderCard)}</div>
+        </div>
+      )}
     </section>
   );
 }
