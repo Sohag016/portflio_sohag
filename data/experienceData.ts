@@ -126,7 +126,47 @@ export const allExperiences: ExperienceItem[] = [
   },
 ];
 
-export const workExperiences: ExperienceItem[] = [allExperiences[0]];
+
+export const workExperiences: ExperienceItem[] = [{
+    id: "codealpha",
+    tag: "★ ML Internship Program",
+    tagBg: "#003366",
+    tagColor: "#ffffff",
+    company: "CodeAlpha",
+    role: "Machine Learning Virtual Internship",
+    period: "2025",
+    description:
+      "Successfully completed a comprehensive Machine Learning program. Gained hands-on expertise in data preprocessing, feature engineering, and ML model development, showcasing a strong foundation in modern AI technologies.",
+    links: [
+      { label: "View Certificate", url: "/assets/certificates/codealpha Cirtificate.jpg" },
+      {
+        label: "Recommendation",
+        url: "/assets/certificates/codealpha recomendation.jpg",
+        secondary: true,
+      },
+    ],
+    side: "left",
+  },
+  {
+    id: "aspire-fellow",
+    tag: "★ Global Leadership Fellow",
+    tagBg: "#a51c30",
+    tagColor: "#ffffff",
+    company: "Aspire Leaders Program",
+    role: "Leadership & Social Impact",
+    period: "October 2025",
+    description:
+      "Successfully completed this elite global initiative, mentored by Harvard University faculty. Focused on developing critical thinking, high-level communication, and actionable social impact strategies within a global community of change-makers.",
+    links: [
+      { label: "View Certificate", url: "/assets/certificates/aspire_certificate.jpg" },
+      {
+        label: "Recognition Letter",
+        url: "/assets/certificates/aspire_letter.jpg",
+        secondary: true,
+      },
+    ],
+    side: "right",
+  },];
 
 export const extracurricularCards: ExperienceCard[] = [
   {

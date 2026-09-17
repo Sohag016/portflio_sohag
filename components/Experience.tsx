@@ -247,49 +247,7 @@ export default function Experience() {
 
       {activeTab === "work" && (
         <div className="experience-container active" id="work">
-          <div
-            className="cert-box"
-            style={{
-              border: "1px solid #d1d5db",
-              padding: "30px",
-              borderRadius: "20px",
-              background: "linear-gradient(135deg, #ffffff 0%, #eef2f7 100%)",
-              boxShadow: "0 15px 35px rgba(0, 51, 102, 0.1)",
-              maxWidth: "960px",
-              margin: "0 auto",
-            }}
-          >
-            <div
-              className="tag"
-              style={{
-                display: "inline-block",
-                padding: "6px 15px",
-                background: "#003366",
-                color: "#ffffff",
-                borderRadius: "50px",
-                fontWeight: 800,
-                fontSize: "0.75em",
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                marginBottom: "15px",
-                boxShadow: "0 4px 10px rgba(0, 51, 102, 0.2)",
-              }}
-            >
-              {workExperiences[0].tag}
-            </div>
-            <div className="desc">
-              <h3 style={{ margin: "0 0 10px", color: "#1a1a1a", fontSize: "1.5em", fontWeight: 800 }}>
-                {workExperiences[0].company}
-              </h3>
-              <h4 style={{ margin: "0 0 15px", color: "#003366", fontSize: "0.95em", fontWeight: 700 }}>
-                {workExperiences[0].role} | {workExperiences[0].period}
-              </h4>
-              <p style={{ fontSize: "0.95em", color: "#444", lineHeight: 1.7, marginBottom: "25px" }}>
-                {workExperiences[0].description}
-              </p>
-              <div style={{ display: "flex", gap: "12px" }}>{workExperiences[0].links.map(renderLink)}</div>
-            </div>
-          </div>
+          <div className="timeline">{workExperiences.map(renderExperienceItem)}</div>
         </div>
       )}
 
