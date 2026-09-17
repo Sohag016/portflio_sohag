@@ -1,0 +1,33 @@
+[
+  {"name":"Python","icon":"https://img.icons8.com/color/48/python--v1.png"},
+  {"name":"SQL","icon":"https://img.icons8.com/color/48/database.png"},
+  {"name":"Machine Learning","icon":"https://img.icons8.com/color/48/brain.png"},
+  {"name":"Deep Learning","icon":"https://img.icons8.com/color/48/brain--v1.png"},
+  {"name":"Artificial Intelligence","icon":"https://img.icons8.com/color/48/artificial-intelligence.png"},
+  {"name":"Computer Vision","icon":"https://img.icons8.com/color/48/camera.png"},
+  {"name":"Digital Image Processing","icon":"https://img.icons8.com/color/48/image.png"},
+  {"name":"Natural Language Processing","icon":"https://img.icons8.com/color/48/bot.png"},
+  {"name":"AI Automation","icon":"https://img.icons8.com/color/48/robot-2.png"},
+  {"name":"Data Analytics","icon":"https://img.icons8.com/color/48/line-chart.png"},
+  {"name":"Data Visualization","icon":"https://img.icons8.com/color/48/bar-chart.png"},
+  {"name":"TensorFlow","icon":"https://img.icons8.com/color/48/tensorflow.png"},
+  {"name":"PyTorch","icon":"https://img.icons8.com/color/48/fire-element.png"},
+  
+  {"name":"Scikit-learn","icon":"https://img.icons8.com/color/48/gear.png"},
+  {"name":"Pandas","icon":"https://img.icons8.com/color/48/pandas.png"},
+  
+  {"name":"Matplotlib","icon":"https://img.icons8.com/color/48/scatter-plot.png"},
+  {"name":"Seaborn","icon":"https://img.icons8.com/color/48/area-chart.png"},
+  {"name":"Power BI","icon":"https://img.icons8.com/color/48/power-bi.png"},
+  
+  {"name":"Big Data","icon":"https://img.icons8.com/color/48/add-database.png"},
+  {"name":"Federated Learning","icon":"https://img.icons8.com/color/48/network.png"},
+  {"name":"Explainable AI","icon":"https://img.icons8.com/color/48/idea.png"},
+  
+  {"name":"Model Deployment","icon":"https://img.icons8.com/color/48/rocket.png"},
+  {"name":"Git","icon":"https://img.icons8.com/color/48/git.png"}
+
+
+
+]
+  

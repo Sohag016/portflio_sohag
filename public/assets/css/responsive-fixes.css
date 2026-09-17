@@ -1,0 +1,96 @@
+/* =====================================================================
+   Responsive safety-net
+   Purpose: keep every section usable on small screens without touching
+   the original design. This file only ADDS rules — it never removes
+   or overrides the visual design, it just fixes overflow / scaling
+   issues on narrow viewports (phones & small tablets).
+   ===================================================================== */
+
+/* Never allow horizontal scrollbars caused by absolutely positioned
+   decorative blobs / blur circles used across sections */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Generic fluid type scale for the big inline-styled headings so they
+   never overflow a small screen, even before the max-width breakpoints
+   kick in */
+.home h1,
+.about h2,
+.contact-section h2,
+.skills-section h1,
+.heading {
+  font-size: clamp(1.8rem, 6vw, 4.2rem) !important;
+}
+
+/* Section side padding: the design uses "0 10%" / "120px 10%" which is
+   fine on desktop but eats too much space on phones */
+@media (max-width: 600px) {
+  .home,
+  .about,
+  .skills-section,
+  .contact-section {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+  }
+
+  .about,
+  .skills-section,
+  .contact-section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+}
+
+/* Contact card: stack the two halves and shrink the padding further on
+   very small phones (the existing 992px rule already stacks the grid) */
+@media (max-width: 480px) {
+  .contact-card > div {
+    padding: 30px 20px !important;
+    min-width: 100% !important;
+  }
+}
+
+/* Hero image circle: scale down gracefully on small phones */
+@media (max-width: 420px) {
+  .image-wrapper > div {
+    width: 240px !important;
+    height: 240px !important;
+  }
+  .image-wrapper > div:first-child {
+    width: 270px !important;
+    height: 270px !important;
+  }
+}
+
+/* Academic / certificate cards already use max-width + auto margins so
+   they shrink naturally, just tighten the inner padding a bit on phones */
+@media (max-width: 480px) {
+  .academic-master-card > div {
+    padding: 20px !important;
+  }
+}
+
+/* Buttons and filter rows: prevent them from being cut off */
+@media (max-width: 480px) {
+  .project-filters,
+  .experience-buttons {
+    gap: 8px !important;
+  }
+}
+
+/* Footer box-container already wraps via CSS grid/flex in a1.css;
+   just make sure long email/phone text wraps instead of overflowing */
+.footer .box p {
+  word-break: break-word;
+}
