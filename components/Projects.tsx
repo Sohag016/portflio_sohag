@@ -53,7 +53,7 @@ export default function Projects() {
             </h2>
           </div>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-medium">
-            Explore a collection of Machine Learning models, AI Automations, Data Analytics, and Web Applications.
+            Explore my research work across Machine Learning, Deep Learning, Explainable AI, Federated Learning, and AI for Healthcare.
           </p>
         </motion.div>
 

@@ -103,11 +103,13 @@ export const personalInfo: PersonalInfo = {
   heroName: "Sohag Hossain",
   typingTexts: [
     "Machine Learning",
+    "Computer Vision",
+    "Deep Learning",
+    "Artificial Intelligence",
     "AI Automation",
     "Data Analytics",
-    "Artificial Intelligence",
-    "Generative AI",
-    "Computer Vision",
+    
+  
   ],
   email: "mdsohaghossain138643@gmail.com",
   location: "Dhaka, Bangladesh",
@@ -173,11 +175,27 @@ export const aboutData = {
   heading: "Architecting the future with",
   headingAccent: "Code & Data.",
   description:
-    "I am a Computer Science professional dedicated to the art of Machine Learning and Data Engineering. With a focus on scalability and real-world impact, I specialize in building intelligent ecosystems like AgroMind AI and AutoSmart AI. I believe in the power of data to solve the world's most complex problems.",
+    "I am a Computer Science and Engineering student and AI/ML researcher working at the intersection of intelligent systems and real-world applications. My research focuses on developing trustworthy, explainable, and privacy-aware AI through Machine Learning, Deep Learning, Computer Vision, Federated Learning, and Multimodal AI. I am particularly interested in AI for healthcare and in translating research ideas into practical, impactful solutions.",
   image: "/assets/images/profile2.jpg",
 };
 
 export const skillsCategories = [
+  {
+  title: "Research & AI",
+  icon: "microscope",
+  iconColor: "#8b5cf6",
+  highlightClass: "highlight-purple",
+  tags: [
+    "Deep Learning",
+    "Explainable AI (XAI)",
+    "Computer Vision",
+    "Multimodal AI",
+    "Federated Learning",
+    "LaTeX",
+    "Research Paper Writing",
+    
+  ],
+},
   {
     title: "Programming",
     icon: "code",
@@ -198,6 +216,7 @@ export const skillsCategories = [
       "SVM",
       "Clustering",
       "PCA",
+      "Scikit-learn",
     ],
   },
   {
@@ -214,6 +233,8 @@ export const skillsCategories = [
       "Hugging Face",
       "Computer Vision",
       "NLP",
+      "PyTorch",
+    "TensorFlow",
     ],
   },
   {
@@ -273,12 +294,12 @@ export const educationList: EducationItem[] = [
     specializationLabel: "Primary Research Specialization",
     specializations: ["Data Science", "Machine Learning", "Computer Vision"],
     thesis: {
-      title:
-        "Autonomous Brain Tumor Classification using Advanced Deep Learning Architectures",
-      status: "In Progress",
-      description:
-        "Exploring high-precision MRI diagnostics through custom CNN models to enhance early-stage medical imaging accuracy.",
-    },
+  title:
+    "Privacy-Preserving and Explainable Federated Learning for Brain Tumor MRI Classification Using LiteGAN-FedNet",
+  status: "Under Peer Review",
+  description:
+    "Developing a decentralized, privacy-preserving AI pipeline (LiteGAN-FedNet) for brain tumor MRI classification. Features client-side feature augmentation via cGAN, PCA compression, and multi-perspective XAI (Grad-CAM, SHAP, LIME) for clinical interpretability.",
+},
   },
   {
     id: "hsc",

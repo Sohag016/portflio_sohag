@@ -1,342 +1,175 @@
 [
-  {
-    "name": "NotyStack Android",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
-    "image": "ANC_Quality",
-    "category": "Machine Learning",
-    "links": {
-      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-      "code": "https://github.com/Sohag016/anc-quality-federated-learning-bangladesh"
-    }
-  },
-  {
-    "name": "SPPU Engg Prep",
-    "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
-    "image": "sppuprepandroid",
-    "category": "Machine Learning",
-    "links": {
-      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-      "code": "https://github.com/jigar-sable/sppu-prep-android"
-    }
-  },
-  {
-    "name": "NewsBox Android",
-    "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
-    "image": "newsboxandroid",
-    "category": "Machine Learning",
-    "links": {
-      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-      "code": "https://github.com/jigar-sable/newsbox-android"
-    }
-  },
-  {
-    "name": "Weatherly Android",
-    "desc": "Native android app built using Java, XML and Volley dependencies. Provides weather forecast.",
-    "image": "weatherlyandroid",
-    "category": "Machine Learning",
-    "links": {
-      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-      "code": "https://github.com/jigar-sable/weatherly-android"
-    }
-  },
-  {
-    "name": "Instagram MERN",
-    "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
-    "image": "instagrammern",
-    "category": "AI Automation",
-    "links": {
-      "view": "https://instagramernstack.herokuapp.com/",
-      "code": "https://github.com/jigar-sable/instagram-mern"
-    }
-  },
-  {
-    "name": "Flipkart MERN",
-    "desc": "Full-Stack Flipkart with Admin Dashboard and Paytm Payment Gateway. MERN Stack WebApp, ready to use for business.",
-    "image": "flipkartmern",
-    "category": "AI Automation",
-    "links": {
-      "view": "https://flipkartwebs.herokuapp.com/",
-      "code": "https://github.com/jigar-sable/flipkart-mern"
-    }
-  },
-  {
-    "name": "ResumeGen",
-    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
-    "image": "resumegen",
-    "category": "AI Automation",
-    "links": {
-      "view": "https://resumegenx.netlify.app/",
-      "code": "https://github.com/jigar-sable/resumegen"
-    }
-  },
-  {
-    "name": "React-Projects",
-    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
-    "image": "reactprojects",
-    "category": "AI Automation",
-    "links": {
-      "view": "https://reactjsprojects.herokuapp.com/",
-      "code": "https://github.com/jigar-sable/React-Projects"
-    }
-  },
-  {
-    "name": "Flipkart PHP",
-    "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
-    "image": "flipkartphp",
-    "category": "data analyst",
-    "links": {
-      "view": "https://github.com/jigar-sable/Flipkart-Clone-PHP",
-      "code": "https://github.com/jigar-sable/Flipkart-Clone-PHP"
-    }
-  },
-  {
-    "name": "JavaScript Projects Website",
-    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
-    "image": "jspro",
-    "category": "Artificial intelligence",
-    "links": {
-      "view": "https://jigar-sable.github.io/JavaScript-Projects",
-      "code": "https://github.com/jigar-sable/JavaScript-Projects"
-    }
-  },
-  {
-    "name": "Web UI Clones",
-    "desc": "Flipkart, YouTube, Instagram, Sololearn web UI clones using tailwindCSS.",
-    "image": "webuiclones",
-    "category": "Artificial intelligence",
-    "links": {
-      "view": "https://github.com/jigar-sable/web-ui-clones",
-      "code": "https://github.com/jigar-sable/web-ui-clones"
-    }
-  },
-  {
-    "name": "Crypto Tracker",
-    "desc": "Crypto Tracker built using ReactJS and Chakra UI. Supports dark mode. API used coingecko.",
-    "image": "cryptotracker",
-    "category": "data analyst",
-    "links": {
-      "view": "https://crypto-tracker-react-project.netlify.app/",
-      "code": "https://github.com/jigar-sable/React-Projects/tree/main/crypto-tracker"
-    }
-  },
-  {
-    "name": "Hulu Website",
-    "desc": "Hulu website built using NextJS and tailwindCSS. API used TMDB, deployed on vercel.",
-    "image": "hulu",
-    "category": "data analyst",
-    "links": {
-      "view": "https://hulu-clone-jigar-sable.vercel.app/",
-      "code": "https://github.com/jigar-sable/React-Projects/tree/main/hulu-clone"
-    }
-  },
-  {
-    "name": "Portfolio Website",
-    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
-    "image": "portfolio1",
-    "category": "Artificial intelligence",
-    "links": {
-      "view": "#",
-      "code": "https://github.com/jigar-sable/Portfolio-Website"
-    }
-  },
-  {
-    "name": "Composey Website",
-    "desc": "Simple landing page website built using HTML, CSS, JavaScript and some JavaScript Libraries.",
-    "image": "composey",
-    "category": "Artificial intelligence",
-    "links": {
-      "view": "https://composey.netlify.app/",
-      "code": "https://github.com/jigar-sable/LGMVIP-WebDev"
-    }
-  },
-  {
-    "name": "Webview App",
-    "desc": "It's an android app which uses web view component for displaying content. This app provides many different features.",
-    "image": "webviewapp",
-    "category": "Generative AI",
-    "links": {
-      "view": "https://github.com/jigar-sable/Android-Webview#webapp--android-webview-app",
-      "code": "https://github.com/jigar-sable/Android-Webview"
-    }
-  },
-  {
-    "name": "PHP Banking Website",
-    "desc": "Basic Banking System based on PHP and MySQL database. Made with HTML, CSS, JavaScript and backend with PHP.",
-    "image": "tsfbank",
-    "category": "Generative AI",
-    "links": {
-      "view": "https://tsfbank.rf.gd",
-      "code": "https://github.com/jigar-sable/TSF-Bank"
-    }
-  },
-  {
-    "name": "Bootstrap Portfolio",
-    "desc": "Portfolio built using HTML, CSS, Bootstrap, SASS and JavaScript. Customized Bootstrap using SCSS.",
-    "image": "bootstrapportfolio",
-    "category": "Generative AI",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Bootstrap Template",
-    "desc": "Basic website template built using HTML and Bootstrap.",
-    "image": "bootstraptemplate",
-    "category": "Generative AI",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Foodicious",
-    "desc": "Basic food website landing page built using HTML, CSS and JavaScript.",
-    "image": "foodicious",
-    "category": "Generative AI",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Food Website",
-    "desc": "Basic food website landing page built using HTML, CSS, SASS, Bootstrap and jQuery.",
-    "image": "foodwebsite",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "WebChat Website",
-    "desc": "It's a web based chat app made using popular javaScript library Socket IO. Allows multiple users to connect.",
-    "image": "webchat",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://github.com/jigar-sable/WebChat#webchat",
-      "code": "https://github.com/jigar-sable/WebChat"
-    }
-  },
-  {
-    "name": "Basic Banking App",
-    "desc": "It's an android app which uses SQLite to store user accounts data. It provides feature to simply transact amount.",
-    "image": "basicbank",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://github.com/jigar-sable/Basic_Banking_App#basic-banking-app",
-      "code": "https://github.com/jigar-sable/Basic_Banking_App"
-    }
-  },
-  {
-    "name": "JavaScript Issue Tracker",
-    "desc": "It provides the feature to Assign Issue With The Auto Generated Id By Using ChanceJS. Uses Local Storage.",
-    "image": "issuetrack",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://jigar-sable.github.io/JavaScript-Projects/projects/issuetracker",
-      "code": "https://github.com/jigar-sable/JavaScript-Projects/tree/main/projects/issuetracker"
-    }
-  },
-  {
-    "name": "PHP PBL Portal",
-    "desc": "A simple portal in which students can submit their PBL projects and faculties can view by access admin panel.",
-    "image": "phppblform",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://github.com/jigar-sable/PHP-Projects/tree/main/pblform#pbl-portal",
-      "code": "https://github.com/jigar-sable/PHP-Projects/tree/main/pblform"
-    }
-  },
-  {
-    "name": "Link List",
-    "desc": "All major profile links in a single website. It's just like clone of link tree. Personalized and Responsive.",
-    "image": "linklist",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://jigar-sable.github.io/LinkList",
-      "code": "https://github.com/jigar-sable/LinkList"
-    }
-  },
-  {
-    "name": "Job Finder Dummy",
-    "desc": "It Fetch JSON Data And Allow Feature To Search Within The Content Displayed. Will be Developed By Using Live APIs.",
-    "image": "saas",
-    "category": "Computer Vision",
-    "links": {
-      "view": "https://jigar-sable.github.io/JavaScript-Projects/api-projects/saas-jobs",
-      "code": "https://github.com/jigar-sable/JavaScript-Projects/tree/main/api-projects/saas-jobs"
-    }
-  },
-  {
-    "name": "Old Websites",
-    "desc": "Bestwebs & ColorCoder. Two Years old websites memories. Simple with basic features.",
-    "image": "oldsites",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Resistor Color Codes",
-    "desc": "Simply provides the color codes of resistors. Calculation information and about resistors.",
-    "image": "resistercolor",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "KIA Info Website",
-    "desc": "Basic KIA webpage displays the info about seltos product range. Specs and Image Gallery.",
-    "image": "kiaweb",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Burger Shop Dummy",
-    "desc": "Basic burger shop webpage allow users to check menu and price. Dummy Order Form.",
-    "image": "burgerweb",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Indian Temples",
-    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
-    "image": "templeweb",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Indian Temples",
-    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
-    "image": "templeweb",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Indian Temples",
-    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
-    "image": "templeweb",
-    "category": "Computer Vision",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
+{
+  "name": "Federated & Explainable ANC Quality Prediction",
+  "desc": "Privacy-preserving Federated Learning (FedAvg, FedProx) and SHAP XAI model using BDHS 2022 data across 8 divisions of Bangladesh.",
+  "image": "anc_federated_xai",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/anc-quality-federated-learning-bangladesh"
   }
+},
+{
+  "name": "People Tracking & Analytics Pipeline",
+  "desc": "Real-time video analytics notebook for multi-person tracking, 17-keypoint pose estimation, face localization, and wrist-to-object association.",
+  "image": "People Analytics",
+  "category": "Computer Vision",
+  "links": {
+    "view": "https://lnkd.in/p/dYZz6hEZ",
+    "code": "https://github.com/Sohag016/People-Analytics-Person-Face-Pose-Held-Object-Detection"
+  }
+},
+  
+  {
+  "name": "Multimodal Consistency Reasoning for Fake News",
+  "desc": "Novel fake news framework on Fakeddit using RoBERTa + ResNet-50, CLIP alignment, Tesseract OCR, and learned MLP fusion with consistency scoring.",
+  "image": "multimodal_fake_news_xai",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/multimodal-fake-news-detection-consistency-reasoning"
+  }
+},
+
+{
+  "name": "LiteGAN-FedNet: Brain Tumor MRI Classification",
+  "desc": "An explainable federated learning framework using conditional GAN feature augmentation, ResNet18 feature extraction, PCA, and multi-level XAI (SHAP, Grad-CAM, LIME).",
+  "image": "litegan_fednet_mri",
+  "category": "Computer Vision",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/brain-tumor-classification-federated-learning"
+  }
+},
+{
+  "name": "Football Match Intelligence: YOLO Player Tracking & Tactical Analytics",
+  "desc": "Real-time football match analysis pipeline using YOLOv8, ByteTrack, K-Means jersey clustering, homography pitch calibration, pass detection, heatmaps, and minimap generation.",
+  "image": "football_analytics_yolo",
+  "category": "Computer Vision",
+  "links": {
+    "view": "https://lnkd.in/p/d8W24tkD",
+    "code": "https://github.com/Sohag016/football-match-intelligence-yolo-tracking"
+  }
+},
+{
+  "name": "LiteHybridNet-DPAM: Lightweight Brain Tumor Classification",
+  "desc": "Novel lightweight brain tumor MRI classification framework featuring Dual-Path Attention (DPAM), Multi-Scale Fusion, MC Dropout uncertainty, and XAI on Figshare and Mendeley datasets.",
+  "image": "litehybridnet_dpam_mri",
+  "category": "Computer Vision",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/LiteHybridNet-DPAM-brain-tumor-classification"
+  }
+},
+
+{
+  "name": "Sentiment Analysis on Amazon Product Reviews",
+  "desc": "Binary sentiment classification pipeline on Amazon product reviews using NLP preprocessing, TF-IDF vectorization, 5 classical ML models, GridSearchCV tuning, and comparative evaluation.",
+  "image": "amazon_sentiment_nlp",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/Sentiment-Analysis-on-Amazon-Reviews#%EF%B8%8F-sentiment-analysis-on-amazon-product-reviews"
+  }
+},
+
+{
+  "name": "Handwritten Character Recognition with Deep CNN",
+  "desc": "End-to-end handwritten digit and character recognition pipeline using dual CNN models on MNIST and EMNIST Balanced datasets with MixUp augmentation, Keras callbacks, and full evaluation.",
+  "image": "emnist_character_recognition",
+  "category": "Deep Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/CodeAlpha_HandwrittenCharacterRecognition"
+  }
+},
+
+{
+  "name": "Brain Tumor Classification using Swin Transformer + CNN + BiLSTM",
+  "desc": "Automated brain tumor classification from MRI scans using a hybrid architecture combining Swin Transformer (global context), CNN (local features), and BiLSTM (sequential feature fusion).",
+  "image": "brain_mri_swin_transformer",
+  "category": "Deep Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/Swin-Transformer-CNN-BiLSTM-hybrid-deep-learning-architecture-"
+  }
+},
+
+{
+  "name": "Multimodal Political Meme Classification",
+  "desc": "Deep learning multimodal classification system for meme political sentiment detection using Vision Transformer (ViT), DistilBERT, Tesseract OCR, and feature fusion.",
+  "image": "multimodal_meme_classification",
+  "category": "Deep Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/Multimodal-Political-Meme-Classification"
+  }
+},
+
+{
+  "name": "AI Chat Agent using n8n + OpenRouter",
+  "desc": "An automated AI chat agent workflow built using n8n and OpenRouter API to process user input and deliver real-time intelligent AI responses.",
+  "image": "n8n_ai_chat_workflow",
+  "category": "AI Automation",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/AI-Chat-Agent-n8n-OpenRouter"
+  }
+},
+  
+{
+  "name": "Automated Newsletter Agent",
+  "desc": "An automated AI newsletter agent built using n8n, Google Gemini AI, Google Sheets, and Gmail API to handle subscriptions, log user data, and deliver confirmation emails.",
+  "image": "n8n_newsletter_agent_workflow",
+  "category": "AI Automation",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/n8n-automated-newsletter-agent"
+  }
+},
+
+{
+  "name": "Credit Scoring Model (Classification)",
+  "desc": "A machine learning project built during the CodeAlpha internship to predict credit card payment defaults using Logistic Regression, Decision Trees, and Random Forest models on the UCI Credit Card dataset.",
+  "image": "codealpha_credit_scoring_model",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/CodeAlpha_CreditScoringModel"
+  }
+},
+
+{
+  "name": "Time-Series Forecasting of CO and NO2 Levels",
+  "desc": "A machine learning and time-series modeling project focused on predicting hourly CO(GT) and NO2(GT) concentrations using ARIMA, Random Forest Regressor, and feature engineering techniques.",
+  "image": "time_series_air_pollution_forecasting",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/Time-Series-Forecasting-of-CO-NO-Levels"
+  }
+},
+
+{
+  "name": "Predicting Customer Credit Mix - End-to-End ML Workflow",
+  "desc": "An end-to-end machine learning pipeline built to classify customer credit mix (Good, Standard, Poor) using Logistic Regression, Random Forest, and Support Vector Classifier with GridSearchCV tuning.",
+  "image": "credit_mix_prediction_ml_workflow",
+  "category": "Machine Learning",
+  "links": {
+    "view": "",
+    "code": "https://github.com/Sohag016/Predicting-Customer-Credit-Mix"
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 ]

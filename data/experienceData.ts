@@ -127,7 +127,8 @@ export const allExperiences: ExperienceItem[] = [
 ];
 
 
-export const workExperiences: ExperienceItem[] = [{
+export const workExperiences: ExperienceItem[] = [
+  {
     id: "codealpha",
     tag: "★ ML Internship Program",
     tagBg: "#003366",
@@ -148,25 +149,43 @@ export const workExperiences: ExperienceItem[] = [{
     side: "left",
   },
   {
-    id: "aspire-fellow",
-    tag: "★ Global Leadership Fellow",
-    tagBg: "#a51c30",
-    tagColor: "#ffffff",
-    company: "Aspire Leaders Program",
-    role: "Leadership & Social Impact",
-    period: "October 2025",
-    description:
-      "Successfully completed this elite global initiative, mentored by Harvard University faculty. Focused on developing critical thinking, high-level communication, and actionable social impact strategies within a global community of change-makers.",
-    links: [
-      { label: "View Certificate", url: "/assets/certificates/aspire_certificate.jpg" },
-      {
-        label: "Recognition Letter",
-        url: "/assets/certificates/aspire_letter.jpg",
-        secondary: true,
-      },
-    ],
-    side: "right",
-  },];
+  id: "becithcon-2026-presenter",
+  tag: "★ IEEE Conference Presenter",
+  tagBg: "#006699",
+  tagColor: "#ffffff",
+  company: "IEEE BECITHCON 2026",
+  role: "Research Paper Presenter",
+  period: "September 2026",
+  description:
+    "Presented research paper (Paper ID: 249) titled 'Federated Explainable Learning for Privacy-Preserving Antenatal Care Quality Prediction in Bangladesh' at the IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON), organized by IEEE EMBS Bangladesh Chapter.",
+  links: [
+    {
+      label: "View Certificate",
+      url: "/assets/certificates/249_ac_page-0001.jpg",
+    },
+  ],
+  side: "right",
+},
+{
+  id: "becithcon-2026-fuzzytriage",
+  tag: "★ IEEE Conference Presenter",
+  tagBg: "#006699",
+  tagColor: "#ffffff",
+  company: "IEEE BECITHCON 2026",
+  role: "Co-Author & Presenter",
+  period: "September 2026",
+  description:
+    "Presented research paper (Paper ID: 250) titled 'FuzzyTriage-BD: Explainable Fuzzy Triage for Bangla Telemedicine Specialist Routing' at the IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON), organized by IEEE EMBS Bangladesh Chapter.",
+  links: [
+    {
+      label: "View Certificate",
+      url: "/assets/certificates/250_ac_page-0001.jpg",
+    },
+  ],
+  side: "left",
+},
+
+];
 
 export const extracurricularCards: ExperienceCard[] = [
   {
@@ -195,6 +214,39 @@ export const extracurricularCards: ExperienceCard[] = [
     links: [{ label: "View Certificate", url: "/assets/certificates/solvio_ai_hackathon_top100.jpg" }],
   },
   {
+    id: "becithcon-2026-paper-249",
+    title: "Federated Explainable Learning for Privacy-Preserving Antenatal Care Quality Prediction in Bangladesh",
+    subtitle: "IEEE BECITHCON 2026 | September 2026",
+    description:
+      "Presented paper (Paper ID: 249) on privacy-preserving explainable AI models for healthcare quality prediction at IEEE BECITHCON 2026.",
+    image: "/assets/certificates/249_ac_page-0001.jpg",
+    alt: "IEEE BECITHCON 2026 Certificate Paper 249",
+    accent: "#006699",
+    links: [{ label: "View Certificate", url: "/assets/certificates/249_ac_page-0001.jpg" }],
+  },
+  {
+    id: "becithcon-2026-paper-250",
+    title: "FuzzyTriage-BD: Explainable Fuzzy Triage for Bangla Telemedicine Specialist Routing",
+    subtitle: "IEEE BECITHCON 2026 | September 2026",
+    description:
+      "Co-authored and presented paper (Paper ID: 250) introducing an explainable fuzzy triage framework for telemedicine routing in Bangladesh.",
+    image: "/assets/certificates/250_ac_page-0001.jpg",
+    alt: "IEEE BECITHCON 2026 Certificate Paper 250",
+    accent: "#006699",
+    links: [{ label: "View Certificate", url: "/assets/certificates/250_ac_page-0001.jpg" }],
+  },
+  {
+  id: "niter-cc-senior-executive",
+  title: "Certificate of Appreciation - Senior Executive Member (AI/ML Segment)",
+  subtitle: "NITER Computer Club | 2025 - 2026",
+  description:
+    "Recognized for exceptional contribution and dedication as a Senior Executive Member of the AI/ML Segment in the 2025-2026 Executive Panel of NITER Computer Club.",
+  image: "/assets/certificates/NCC.png",
+  alt: "NITER Computer Club Certificate of Appreciation - Senior Executive Member",
+  accent: "#d4af37",
+  links: [{ label: "View Certificate", url: "/assets/certificates/NCC.png" }],
+},
+{
     id: "leadership",
     title: "The Leadership Blueprint",
     subtitle: "Udemy | February 2025",
