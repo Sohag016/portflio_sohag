@@ -13,7 +13,7 @@ import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-white selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-900 text-white selection:bg-blue-600 selection:text-white">
       <Navbar />
       <FloatingSocials />
       <Hero />
