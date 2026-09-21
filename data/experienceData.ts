@@ -30,6 +30,26 @@ export type ExperienceCard = {
 
 export const allExperiences: ExperienceItem[] = [
   {
+  id: "researchustad-profile",
+  tag: "★ Researcher Profile",
+  tagBg: "#003366",
+  tagColor: "#ffffff",
+  company: "Research Ustad",
+  role: "Junior Researcher",
+  period: "2026 – Present",
+  description:
+    "Active academic and research profile focusing on Machine Learning, Explainable AI (XAI), Federated Learning, Computer Vision, and Multimodal AI applications in healthcare and natural language processing.",
+  links: [
+    { label: "View Profile", url: "https://researchustad.org/user/dashboard/profileinfo" },
+    {
+      label: "Contact Email",
+      url: "mailto:mdshoag11@niter.edu.bd",
+      secondary: true,
+    },
+  ],
+  side: "left",
+},
+  {
     id: "codealpha",
     tag: "★ ML Internship Program",
     tagBg: "#003366",
@@ -47,7 +67,7 @@ export const allExperiences: ExperienceItem[] = [
         secondary: true,
       },
     ],
-    side: "left",
+    side: "right",
   },
   {
     id: "aspire-fellow",
@@ -67,7 +87,7 @@ export const allExperiences: ExperienceItem[] = [
         secondary: true,
       },
     ],
-    side: "right",
+    side: "left",
   },
   {
     id: "solvio-hackathon",
@@ -80,7 +100,7 @@ export const allExperiences: ExperienceItem[] = [
     description:
       "As the Team Leader of ByteCivic, I successfully spearheaded our efforts to secure a position among the Top 100 Teams. This achievement highlights my ability to drive innovation, manage collaborative problem-solving, and deliver excellence in one of Bangladesh's largest AI hackathons.",
     links: [{ label: "View Official Certificate", url: "/assets/certificates/solvio_ai_hackathon_top100.jpg" }],
-    side: "left",
+    side: "right",
   },
   {
     id: "cuet-datathon",
@@ -93,7 +113,7 @@ export const allExperiences: ExperienceItem[] = [
     description:
       "Participated in the competitive Datathon hosted by the Department of CSE, CUET. Contributed to data-driven solution development, showcasing proficiency in real-world problem-solving and analytical thinking within a high-stakes team environment.",
     links: [{ label: "View Participation Certificate", url: "/assets/certificates/CUET_Datathon_Certificate.jpg" }],
-    side: "right",
+    side: "left",
   },
   {
     id: "igso-volunteer",
@@ -106,7 +126,7 @@ export const allExperiences: ExperienceItem[] = [
     description:
       "Contributed as a core volunteer for the 2nd International General Science Olympiad. Played a pivotal role in streamlining event logistics, participant management, and ensuring the seamless execution of this high-profile international scientific event.",
     links: [{ label: "View Official Certificate", url: "/assets/certificates/IGSO_volunteer_certificate.jpg" }],
-    side: "left",
+    side: "right",
   },
   {
     id: "shikkhar-alo",
@@ -122,12 +142,32 @@ export const allExperiences: ExperienceItem[] = [
       { label: "View Certificate", url: "/assets/certificates/Shikkhar Alo Certificate.jpg" },
       { label: "Recognition Letter", url: "/assets/certificates/Shikkhar Alo.jpg", secondary: true },
     ],
-    side: "right",
+    side: "left",
   },
 ];
 
 
 export const workExperiences: ExperienceItem[] = [
+  {
+  id: "researchustad-profile",
+  tag: "★ Researcher Profile",
+  tagBg: "#003366",
+  tagColor: "#ffffff",
+  company: "Research Ustad",
+  role: "Junior Researcher",
+  period: "2026 – Present",
+  description:
+    "Active academic and research profile focusing on Machine Learning, Explainable AI (XAI), Federated Learning, Computer Vision, and Multimodal AI applications in healthcare and natural language processing.",
+  links: [
+    { label: "View Profile", url: "https://researchustad.org/user/dashboard/profileinfo" },
+    {
+      label: "Contact Email",
+      url: "mailto:mdshoag11@niter.edu.bd",
+      secondary: true,
+    },
+  ],
+  side: "left",
+},
   {
     id: "codealpha",
     tag: "★ ML Internship Program",
@@ -146,7 +186,7 @@ export const workExperiences: ExperienceItem[] = [
         secondary: true,
       },
     ],
-    side: "left",
+    side: "right",
   },
   {
   id: "becithcon-2026-presenter",
@@ -164,7 +204,7 @@ export const workExperiences: ExperienceItem[] = [
       url: "/assets/certificates/249_ac_page-0001.jpg",
     },
   ],
-  side: "right",
+  side: "left",
 },
 {
   id: "becithcon-2026-fuzzytriage",
@@ -182,7 +222,7 @@ export const workExperiences: ExperienceItem[] = [
       url: "/assets/certificates/250_ac_page-0001.jpg",
     },
   ],
-  side: "left",
+  side: "right",
 },
 
 ];

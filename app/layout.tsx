@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sohag Hossain | Machine Learning Engineer & Data Scientist",
     description:
-      "Personal portfolio showcasing AI, Machine Learning, Data Engineering, Research Publications, and Software Projects.",
+      "Personal portfolio showcasing AI, Machine Learning, Data Engineering, Research Publications.",
     url: "https://sohag016.github.io",
     siteName: "Sohag Hossain Portfolio",
     images: [
