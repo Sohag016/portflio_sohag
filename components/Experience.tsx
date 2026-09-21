@@ -23,7 +23,9 @@ export default function Experience() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        flex: 1,
+        flex: "1 1 140px",
+        minWidth: 0,
+        maxWidth: "100%",
         padding: "12px",
         background: link.secondary ? "transparent" : "#003366",
         color: link.secondary ? "#003366" : "white",
@@ -33,6 +35,8 @@ export default function Experience() {
         fontWeight: 700,
         fontSize: "0.85em",
         textAlign: "center",
+        lineHeight: 1.3,
+        whiteSpace: "normal",
         transition: "all 0.4s ease",
       }}
       onMouseOver={(e) => {
@@ -105,7 +109,7 @@ export default function Experience() {
           <p style={{ fontSize: "0.95em", color: "#444", lineHeight: 1.7, marginBottom: "25px" }}>
             {item.description}
           </p>
-          <div style={{ display: "flex", gap: "12px" }}>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             {item.links.map(renderLink)}
           </div>
         </div>

@@ -366,6 +366,18 @@
     border-radius: 10px;
   }
 
+  .experience-section .container .desc > div {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .experience-section .container .desc a {
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
   .exp-item {
     padding: 1.2rem;
     font-size: 1rem;
