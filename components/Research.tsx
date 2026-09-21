@@ -245,11 +245,29 @@ export default function Research() {
               </span>
             </h2>
           </div>
-          <p className="text-slate-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed font-medium">
-            Showcasing academic research contributions, scholarly publications,
-            and innovative work in Artificial Intelligence, Machine Learning, and
-            Data Science.
-          </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">
+              My research focus spans:
+            </p>
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+              {[
+                "Machine Learning",
+                "Explainable AI (XAI)",
+                "Federated Learning",
+                "Computer Vision",
+                "Multimodal AI",
+                "Healthcare AI",
+                "Natural Language Processing",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[11px] sm:text-xs font-bold text-blue-700 shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         {/* Stacking Cards */}
