@@ -40,7 +40,7 @@ export default function Contact() {
             email: formData.email,
             subject: formData.subject || `Portfolio Message from ${formData.name}`,
             message: formData.message,
-            _subject: `🚀 Portfolio Contact Notification: ${formData.name}`,
+            _subject: `Portfolio Contact Notification: ${formData.name}`,
             _template: "table",
             _captcha: "false",
           }),
@@ -51,6 +51,12 @@ export default function Contact() {
 
       if (response.ok && (data.success === "true" || data.success === true || data.message)) {
         setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "New Inquiry from Portfolio",
+          message: "",
+        });
       } else {
         setStatus("error");
         setFeedbackMsg(
@@ -256,7 +262,7 @@ export default function Contact() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
                 {status === "error" && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}

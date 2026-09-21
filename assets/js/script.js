@@ -38,20 +38,40 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+    const contactForm = document.getElementById('contact-form');
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : 'Send';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+            }
+
+            emailjs.init({ publicKey: 'user_TTDmetQLYgWCLzHTDgqxm' });
+
+            emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    contactForm.reset();
+                    alert('Form Submitted Successfully');
+                })
+                .catch(function (error) {
+                    console.log('FAILED...', error);
+                    alert('Form Submission Failed! Try Again');
+                })
+                .finally(function () {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                });
+        });
+    }
     // <!-- emailjs to mail contact form data -->
 
 });
