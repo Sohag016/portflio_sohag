@@ -291,8 +291,8 @@ export const educationList: EducationItem[] = [
     gradeLabel: "Cumulative CGPA",
     badge: "Candidate for Global Research",
     badgeColor: "#38bdf8",
-    specializationLabel: "Primary Research Specialization",
-    specializations: ["Data Science", "Machine Learning", "Computer Vision"],
+    specializationLabel: "Major Area of Study",
+    specializations: ["Data Science", "Machine Learning", "Artificial Intelligence", "Natural Language Processing","Digital Image Processing"],
     thesis: {
   title:
     "Privacy-Preserving and Explainable Federated Learning for Brain Tumor MRI Classification Using LiteGAN-FedNet",
