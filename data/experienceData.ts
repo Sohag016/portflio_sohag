@@ -286,6 +286,7 @@ export const extracurricularCards: ExperienceCard[] = [
   accent: "#d4af37",
   links: [{ label: "View Certificate", url: "/assets/certificates/NCC.png" }],
 },
+
 {
     id: "leadership",
     title: "The Leadership Blueprint",
@@ -344,6 +345,20 @@ export const extracurricularCards: ExperienceCard[] = [
       { label: "Recognition Letter", url: "/assets/certificates/Shikkhar Alo.jpg" },
     ],
   },
+  {
+  id: "ai-buildfest-2026",
+  title: "THE INFINITY AI BUILDFEST 2026",
+  subtitle: "Participant (Preliminary Round)",
+  description:
+    "Successfully participated in the Preliminary Round of THE INFINITY AI BUILDFEST 2026, demonstrating dedication, creativity, and commitment to building AI-powered solutions with real-world impact.",
+  image: "/assets/certificates/AI Buildfest Certificate.jpg", // প্রয়োজন অনুযায়ী ফাইল পাথ আপডেট করে নিন
+  alt: "THE INFINITY AI BUILDFEST 2026 Certificate",
+  accent: "#1e1b4b", // সার্টিফিকেট থিমের সাথে মিলিয়ে ডার্ক পার্পল/ব্লু কালার হ্যাশ
+  links: [
+    { label: "View Certificate", url: "/assets/certificates/AI Buildfest Certificate.jpg" },
+    { label: "Verify Certificate", url: "https://cloudcampbd.com/verify/dda47df43d37de4a4fe22bf4" },
+  ],
+},
 ];
 
 export const certificationCards: ExperienceCard[] = [
