@@ -19,6 +19,17 @@
     "code": "https://github.com/Sohag016/People-Analytics-Person-Face-Pose-Held-Object-Detection"
   }
 },
+
+{
+  "name": "Garment Worker Tracking",
+  "desc": "A YOLO11 and ByteTrack pipeline for monitoring garment worker productivity by tracking poses and analyzing working versus idle times.",
+  "image": "Garment Worker",
+  "category": "Computer Vision",
+  "links": {
+    "view": "https://github.com/Sohag016/Garment-Worker-Tracking/blob/main/output_tracked.mp4",
+    "code": "https://github.com/Sohag016/Garment-Worker-Tracking"
+  }
+},
   
   {
   "name": "Multimodal Consistency Reasoning for Fake News",
