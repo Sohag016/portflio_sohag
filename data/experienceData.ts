@@ -40,7 +40,7 @@ export const allExperiences: ExperienceItem[] = [
   description:
     "Active academic and research profile focusing on Machine Learning, Explainable AI (XAI), Federated Learning, Computer Vision, and Multimodal AI applications in healthcare and natural language processing.",
   links: [
-    { label: "View Profile", url: "https://researchustad.org/user/dashboard/profileinfo" },
+    { label: "View Profile", url: "https://researchustad.org/team-members/6a801e4f2440ff56516be5a4" },
     {
       label: "Contact Email",
       url: "mailto:mdshoag11@niter.edu.bd",
@@ -159,7 +159,7 @@ export const workExperiences: ExperienceItem[] = [
   description:
     "Active academic and research profile focusing on Machine Learning, Explainable AI (XAI), Federated Learning, Computer Vision, and Multimodal AI applications in healthcare and natural language processing.",
   links: [
-    { label: "View Profile", url: "https://researchustad.org/user/dashboard/profileinfo" },
+    { label: "View Profile", url: "https://researchustad.org/team-members/6a801e4f2440ff56516be5a4" },
     {
       label: "Contact Email",
       url: "mailto:mdshoag11@niter.edu.bd",
