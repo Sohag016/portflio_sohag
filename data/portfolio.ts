@@ -117,7 +117,7 @@ export const personalInfo: PersonalInfo = {
   resumeUrl:
     "https://drive.google.com/file/d/1gTgdPq5Tl0oj2bwoXY9P8vn6069wAeye/view?usp=sharing",
   cvUrl:
-    "https://drive.google.com/file/d/173FUr52bRZUa9v6DlYq6BrS81dSSI8LF/view?usp=sharing",
+    "https://drive.google.com/file/d/1pCdhBaR5Gpfcz7WTcniu_fc89Ul0-HiC/view?usp=drive_link",
   heroBadges: [
     {
       title: "NASA Space Apps",
@@ -286,7 +286,7 @@ export const educationList: EducationItem[] = [
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "NITER | University of Dhaka Affiliated",
     period: "2021 - 2024",
-    grade: "3.60",
+    grade: "3.62",
     gradeMax: "/ 4.00",
     gradeLabel: "Cumulative CGPA",
     badge: "Candidate for Global Research",
