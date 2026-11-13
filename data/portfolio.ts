@@ -117,7 +117,7 @@ export const personalInfo: PersonalInfo = {
   resumeUrl:
     "https://drive.google.com/file/d/1gTgdPq5Tl0oj2bwoXY9P8vn6069wAeye/view?usp=sharing",
   cvUrl:
-    "https://drive.google.com/file/d/1pCdhBaR5Gpfcz7WTcniu_fc89Ul0-HiC/view?usp=drive_link",
+    "https://drive.google.com/file/d/1D2PeH4dfJcxaWRyMMJPNTwwQldTve3UH/view?usp=drive_link",
   heroBadges: [
     {
       title: "NASA Space Apps",
